@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  app:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+      - LINE_CHANNEL_ACCESS_TOKEN=YOUR_LINE_CHANNEL_ACCESS_TOKEN
+      - LINE_CHANNEL_SECRET=YOUR_LINE_CHANNEL_SECRET
+      - NOTION_AUTH_TOKEN=YOUR_NOTION_AUTH_TOKEN
+      - MONGODB_URI=mongodb://YOUR_MONGODB_URI
