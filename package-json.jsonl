@@ -1,0 +1,35 @@
+
+{
+  "name": "MAPs",
+  "version": "1.0.0",
+  "description": "AI-powered Multi-API Integration Platform",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "dev": "concurrently \"tsc -w\" \"nodemon dist/server.js\""
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "js-yaml": "^4.1.0",
+    "kuromoji": "^0.1.2",
+    "mongoose": "^5.12.7",
+    "openai": "^3.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-flow-renderer": "^9.6.0",
+    "rete": "^1.4.6"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/js-yaml": "^4.0.1",
+    "@types/kuromoji": "^0.1.0",
+    "@types/node": "^15.0.2",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.5",
+    "concurrently": "^6.1.0",
+    "nodemon": "^2.0.7",
+    "typescript": "^4.2.4"
+  }
+}

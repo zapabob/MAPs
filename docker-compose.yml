@@ -1,0 +1,24 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - DB_CONNECTION_STRING=mongodb://db:27017/ai-multi-api-integration-platform
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GOOGLE_GEMINI_API_KEY=${GOOGLE_GEMINI_API_KEY}
+      - ANTHROPIC_CLAUDE_API_KEY=${ANTHROPIC_CLAUDE_API_KEY}
+      - LINE_CHANNEL_ACCESS_TOKEN=${LINE_CHANNEL_ACCESS_TOKEN}
+      - LINE_CHANNEL_SECRET=${LINE_CHANNEL_SECRET}
+      - YOUTUBE_API_KEY=${YOUTUBE_API_KEY}
+      - X_API_KEY=${X_API_KEY}
+      - X_API_SECRET=${X_API_SECRET}
+      - MICROSOFT_API_KEY=${MICROSOFT_API_KEY}
+    depends_on:
+      - db
+  db:
+    image: mongo
+    volumes:
+      - ./data/db:/data/db
